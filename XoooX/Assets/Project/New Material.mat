@@ -44,11 +44,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_CA88ADE2_Texture:
+        m_Texture: {fileID: 2800000, guid: d1ba7dd7b6b670142953815b8de10e10, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_DD65612D: 3
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -71,6 +76,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_A88AECE3: {r: 0, g: 6, b: 8, a: 0}
     - _BaseColor: {r: 0.8867924, g: 0.29699183, b: 0.29699183, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
