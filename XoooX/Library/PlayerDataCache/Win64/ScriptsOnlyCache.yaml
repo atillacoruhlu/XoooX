@@ -1,15 +1,25 @@
 ScriptsOnlyBuild:
   usedScripts:
     Unity.Postprocessing.Runtime.dll:
+    - UnityEngine.Rendering.PostProcessing.AmbientOcclusion
+    - UnityEngine.Rendering.PostProcessing.AutoExposure
     - UnityEngine.Rendering.PostProcessing.Bloom
+    - UnityEngine.Rendering.PostProcessing.ChromaticAberration
     - UnityEngine.Rendering.PostProcessing.ColorGrading
+    - UnityEngine.Rendering.PostProcessing.DepthOfField
+    - UnityEngine.Rendering.PostProcessing.Grain
+    - UnityEngine.Rendering.PostProcessing.LensDistortion
+    - UnityEngine.Rendering.PostProcessing.MotionBlur
+    - UnityEngine.Rendering.PostProcessing.PostProcessLayer
     - UnityEngine.Rendering.PostProcessing.PostProcessProfile
+    - UnityEngine.Rendering.PostProcessing.PostProcessResources
     - UnityEngine.Rendering.PostProcessing.PostProcessVolume
+    - UnityEngine.Rendering.PostProcessing.ScreenSpaceReflections
+    - UnityEngine.Rendering.PostProcessing.Vignette
     Unity.RenderPipelines.Lightweight.Runtime.dll:
     - UnityEngine.Rendering.LWRP.ForwardRendererData
     - UnityEngine.Rendering.LWRP.LWRPAdditionalCameraData
     - UnityEngine.Rendering.LWRP.LightweightRenderPipelineAsset
-    - UnityEngine.Rendering.LWRP.LightweightRenderPipelineEditorResources
   sceneClasses:
     Assets/Project/new.unity:
     - Class: 1
@@ -30,7 +40,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
+      Script: {instanceID: 0}
+    - Class: 72
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -39,18 +53,18 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9422}
+      Script: {instanceID: 9402}
     - Class: 114
-      Script: {instanceID: 9510}
+      Script: {instanceID: 9526}
     - Class: 114
-      Script: {instanceID: 9932}
+      Script: {instanceID: 9948}
     - Class: 114
-      Script: {instanceID: 10130}
+      Script: {instanceID: 10146}
     - Class: 114
-      Script: {instanceID: 11642}
+      Script: {instanceID: 10638}
+    - Class: 114
+      Script: {instanceID: 11658}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
