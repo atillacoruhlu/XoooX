@@ -4940,8 +4940,8 @@ MonoBehaviour:
   Ocount: 0
   xMaterial: {fileID: 2100000, guid: 13453fbd5d3f89a45adcc1bb5cec8fd4, type: 2}
   oMaterial: {fileID: 2100000, guid: f7a21eb8e6bc7af4d84ebbdf3701ab46, type: 2}
-  xComboMaterial: {fileID: 0}
-  oComboMaterial: {fileID: 0}
+  xComboMaterial: {fileID: 2100000, guid: e87566b1aad2cb34594e766c4c888a49, type: 2}
+  oComboMaterial: {fileID: 2100000, guid: 44519df206100c24791f19c0b08a4737, type: 2}
   SummonParticle: {fileID: 5926241847549675953, guid: f6bbae1947005294484aa1cc71e0e670,
     type: 3}
   ComboParticle: {fileID: 6808684378109360546, guid: d87555a265099fc4490a51c1e1deb576,

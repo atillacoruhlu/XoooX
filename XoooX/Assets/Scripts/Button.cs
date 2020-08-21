@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Button : MonoBehaviour {
-    private GameObject plane;
+    private Material CheckMaterial;
     private GameObject planeParticle;
     public Vector3 offset;
     public Material materialXO;
     Renderer rende;
 
     void OnMouseDown () {
-        if (plane != null) {
+        if (CheckMaterial != null) {
             Debug.Log ("Illegal move!");
             return;
         }
         //plane yerleştir hamle yap
         GameObject particle = GameMaster.instance.GetParticle ();
         Material materialXO = GameMaster.instance.GetPlaneBuild ();
-
+        CheckMaterial=materialXO;
         rende = GetComponent<Renderer> ();
         rende.enabled = true;
         rende.sharedMaterial = materialXO;
