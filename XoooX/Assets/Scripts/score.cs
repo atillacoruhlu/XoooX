@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class score : MonoBehaviour
+public class Score : MonoBehaviour
 {
     
     void Update()
