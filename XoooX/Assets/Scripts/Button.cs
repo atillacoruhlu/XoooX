@@ -20,6 +20,7 @@ public class Button : MonoBehaviour {
         changeArray (this.name);
         GameMaster.instance.MoveNumber++;
         Destroy(planet, 2f);
+        Destroy(this.gameObject);
     }
     void changeArray (string ButtonName) {
         string check = ButtonName;
