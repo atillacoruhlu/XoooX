@@ -8,7 +8,7 @@ public class Button : MonoBehaviour {
     public Vector3 offset;
     public Material materialXO;
     Renderer rende;
-
+    
     void OnMouseDown () {
         if (CheckMaterial != null) {
             Debug.Log ("Illegal move!");

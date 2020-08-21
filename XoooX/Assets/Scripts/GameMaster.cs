@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class GameMaster : MonoBehaviour {
     public string[] Moves = new string[26] { "X", "O", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X" };
-    public string[, ] Red = new string[9, 2] { { "", "1" }, { "", "2" }, { "", "3" }, { "", "6" }, { "", "7" }, { "", "8" }, { "", "11" }, { "", "12" }, { "", "13" } };
-    public string[, ] Blue = new string[9, 2] { { "", "13" }, { "", "14" }, { "", "15" }, { "", "18" }, { "", "19" }, { "", "20" }, { "", "23" }, { "", "24" }, { "", "25" } };
-    public string[, ] Green = new string[9, 2] { { "", "3" }, { "", "4" }, { "", "5" }, { "", "8" }, { "", "9" }, { "", "10" }, { "", "13" }, { "", "14" }, { "", "15" } };
-    public string[, ] Yellow = new string[9, 2] { { "", "11" }, { "", "12" }, { "", "13" }, { "", "16" }, { "", "17" }, { "", "18" }, { "", "21" }, { "", "22" }, { "", "23" } };
-    Renderer rende;
+    //public string[, ] Red = new string[9, 2] { { "", "1" }, { "", "2" }, { "", "3" }, { "", "6" }, { "", "7" }, { "", "8" }, { "", "11" }, { "", "12" }, { "", "13" } };
+    //public string[, ] Blue = new string[9, 2] { { "", "13" }, { "", "14" }, { "", "15" }, { "", "18" }, { "", "19" }, { "", "20" }, { "", "23" }, { "", "24" }, { "", "25" } };
+    //public string[, ] Green = new string[9, 2] { { "", "3" }, { "", "4" }, { "", "5" }, { "", "8" }, { "", "9" }, { "", "10" }, { "", "13" }, { "", "14" }, { "", "15" } };
+    //public string[, ] Yellow = new string[9, 2] { { "", "11" }, { "", "12" }, { "", "13" }, { "", "16" }, { "", "17" }, { "", "18" }, { "", "21" }, { "", "22" }, { "", "23" } };
+    
+    public string[,] Red = new string[9,3] { { "", "1", ""}, { "", "2" , ""}, { "", "3", "" }, { "", "6", "" }, { "", "7" , ""}, { "", "8" , ""}, { "", "11" , ""}, { "", "12", "" }, { "", "13", "" } };
+    public string[,] Blue = new string[9, 3] { { "", "13" , ""}, { "", "14", "" }, { "", "15", "" }, { "", "18" , ""}, { "", "19" , ""}, { "", "20", "" }, { "", "23", "" }, { "", "24", "" }, { "", "25" , ""} };
+    public string[,] Green = new string[9, 3] { { "", "3" , ""}, { "", "4" , ""}, { "", "5" , ""}, { "", "8" , ""}, { "", "9" , ""}, { "", "10" , ""}, { "", "13" , ""}, { "", "14" , ""}, { "", "15" , ""} };
+    public string[,] Yellow = new string[9, 3] { { "", "11", "" }, { "", "12" , ""}, { "", "13" , ""}, { "", "16" , ""}, { "", "17", "" }, { "", "18", "" }, { "", "21" , ""}, { "", "22", "" }, { "", "23", "" } };
     public int MoveNumber = 0;
     public int Xcount = 0;
     public int Ocount = 0;
@@ -67,42 +71,41 @@ public class GameMaster : MonoBehaviour {
         return comboParticle;
     }
 
-    public int Check (string[, ] OXO, string Word) {
-        string[, ] checker = new string[9, 2];
-        checker = OXO;
+    public int Check (string[, ] checker, string Word) {
+        
         int count = 0;
 
         if (checker[0, 0] == Word && checker[1, 0] == Word && checker[2, 0] == Word) {
             count++;
-            if (Word == "X") { ChangePlaneColor (checker, 0, 1, 2, xComboMaterial); } else { ChangePlaneColor (checker, 0, 1, 2, oComboMaterial); }
+            if (Word == "X") { ChangePlaneColor (checker, 0, 1, 2, xComboMaterial); checker[0,2]="F";checker[1,2]="F";checker[2,2]="F";} else { ChangePlaneColor (checker, 0, 1, 2, oComboMaterial); checker[0,2]="F";checker[1,2]="F";checker[2,2]="F";}
         }
         if (checker[0, 0] == Word && checker[3, 0] == Word && checker[6, 0] == Word) {
             count++;
-            if (Word == "X") { ChangePlaneColor (checker, 0, 3, 6, xComboMaterial); } else { ChangePlaneColor (checker, 0, 3, 6, oComboMaterial); }
+            if (Word == "X") { ChangePlaneColor (checker, 0, 3, 6, xComboMaterial); checker[0,2]="F";checker[3,2]="F";checker[6,2]="F";} else { ChangePlaneColor (checker, 0, 3, 6, oComboMaterial); checker[0,2]="F";checker[3,2]="F";checker[6,2]="F";}
         }
         if (checker[0, 0] == Word && checker[4, 0] == Word && checker[8, 0] == Word) {
             count++;
-            if (Word == "X") { ChangePlaneColor (checker, 0, 4, 8, xComboMaterial); } else { ChangePlaneColor (checker, 0, 4, 8, oComboMaterial); }
+            if (Word == "X") { ChangePlaneColor (checker, 0, 4, 8, xComboMaterial); checker[0,2]="F";checker[4,2]="F";checker[8,2]="F";} else { ChangePlaneColor (checker, 0, 4, 8, oComboMaterial); checker[0,2]="F";checker[4,2]="F";checker[8,2]="F";}
         }
         if (checker[1, 0] == Word && checker[4, 0] == Word && checker[7, 0] == Word) {
             count++;
-            if (Word == "X") { ChangePlaneColor (checker, 1, 4, 7, xComboMaterial); } else { ChangePlaneColor (checker, 1, 4, 7, oComboMaterial); }
+            if (Word == "X") { ChangePlaneColor (checker, 1, 4, 7, xComboMaterial); checker[1,2]="F";checker[4,2]="F";checker[7,2]="F";} else { ChangePlaneColor (checker, 1, 4, 7, oComboMaterial); checker[1,2]="F";checker[4,2]="F";checker[7,2]="F";}
         }
         if (checker[2, 0] == Word && checker[5, 0] == Word && checker[8, 0] == Word) {
             count++;
-            if (Word == "X") { ChangePlaneColor (checker, 2, 5, 8, xComboMaterial); } else { ChangePlaneColor (checker, 2, 5, 8, oComboMaterial); }
+            if (Word == "X") { ChangePlaneColor (checker, 2, 5, 8, xComboMaterial); checker[2,2]="F";checker[5,2]="F";checker[8,2]="F";} else { ChangePlaneColor (checker, 2, 5, 8, oComboMaterial); checker[2,2]="F";checker[5,2]="F";checker[8,2]="F";}
         }
         if (checker[2, 0] == Word && checker[4, 0] == Word && checker[6, 0] == Word) {
             count++;
-            if (Word == "X") { ChangePlaneColor (checker, 2, 4, 6, xComboMaterial); } else { ChangePlaneColor (checker, 2, 4, 6, oComboMaterial); }
+            if (Word == "X") { ChangePlaneColor (checker, 2, 4, 6, xComboMaterial); checker[2,2]="F";checker[4,2]="F";checker[6,2]="F";} else { ChangePlaneColor (checker, 2, 4, 6, oComboMaterial); checker[2,2]="F";checker[4,2]="F";checker[6,2]="F";}
         }
         if (checker[3, 0] == Word && checker[4, 0] == Word && checker[5, 0] == Word) {
             count++;
-            if (Word == "X") { ChangePlaneColor (checker, 3, 4, 5, xComboMaterial); } else { ChangePlaneColor (checker, 3, 4, 5, oComboMaterial); }
+            if (Word == "X") { ChangePlaneColor (checker, 3, 4, 5, xComboMaterial); checker[3,2]="F";checker[4,2]="F";checker[5,2]="F";} else { ChangePlaneColor (checker, 3, 4, 5, oComboMaterial); checker[3,2]="F";checker[4,2]="F";checker[5,2]="F";}
         }
         if (checker[6, 0] == Word && checker[7, 0] == Word && checker[8, 0] == Word) {
             count++;
-            if (Word == "X") { ChangePlaneColor (checker, 6, 7, 8, xComboMaterial); } else { ChangePlaneColor (checker, 6, 7, 8, oComboMaterial); }
+            if (Word == "X") { ChangePlaneColor (checker, 6, 7, 8, xComboMaterial); checker[6,2]="F";checker[7,2]="F";checker[8,2]="F";} else { ChangePlaneColor (checker, 6, 7, 8, oComboMaterial); checker[6,2]="F";checker[7,2]="F";checker[8,2]="F";}
         }
         return count;
     }
@@ -110,13 +113,15 @@ public class GameMaster : MonoBehaviour {
     public int once;
     public void ChangePlaneColor (string[, ] rausch, int xeculus1, int xeculus2, int xeculus3, Material material_) {
 
+        if(rausch[xeculus1,2]==""|| rausch[xeculus2,2]==""||rausch[xeculus3,2]==""){
+
         GameObject.Find ("Planes/" + rausch[xeculus1, 1]).GetComponent<Renderer> ().sharedMaterial = material_;
         GameObject.Find ("Planes/" + rausch[xeculus2, 1]).GetComponent<Renderer> ().sharedMaterial = material_;
         GameObject.Find ("Planes/" + rausch[xeculus3, 1]).GetComponent<Renderer> ().sharedMaterial = material_;
-
-        // Destroy (Instantiate (ComboParticle, GameObject.Find ("Planes/" + rausch[xeculus1, 1]).transform.position, GameObject.Find ("Planes/" + rausch[xeculus1, 1]).transform.rotation), 1f);
-        // Destroy (Instantiate (ComboParticle, GameObject.Find ("Planes/" + rausch[xeculus2, 1]).transform.position, GameObject.Find ("Planes/" + rausch[xeculus2, 1]).transform.rotation), 1f);
-        // Destroy (Instantiate (ComboParticle, GameObject.Find ("Planes/" + rausch[xeculus3, 1]).transform.position, GameObject.Find ("Planes/" + rausch[xeculus3, 1]).transform.rotation), 1f);
+        
+       Destroy (Instantiate (ComboParticle, GameObject.Find ("Planes/" + rausch[xeculus1, 1]).transform.position, GameObject.Find ("Planes/" + rausch[xeculus1, 1]).transform.rotation), 1f);
+       Destroy (Instantiate (ComboParticle, GameObject.Find ("Planes/" + rausch[xeculus2, 1]).transform.position, GameObject.Find ("Planes/" + rausch[xeculus2, 1]).transform.rotation), 1f);
+       Destroy (Instantiate (ComboParticle, GameObject.Find ("Planes/" + rausch[xeculus3, 1]).transform.position, GameObject.Find ("Planes/" + rausch[xeculus3, 1]).transform.rotation), 1f);}
 
     }
 
