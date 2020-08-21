@@ -19,13 +19,15 @@ public class GameMaster : MonoBehaviour {
         instance = this;
     }
 
-    public GameObject PlaneXprefab;
-    public GameObject PlaneOprefab;
+    public Material xMaterial;
+    public Material oMaterial;
+    public Material xComboMaterial;
+    public Material oComboMaterial;
     public GameObject SummonParticle;
     public GameObject ComboParticle;
 
     void Start () {
-        planeToBuild = PlaneXprefab;
+        planeToBuild = xMaterial;
         particle = SummonParticle;
         comboParticle = ComboParticle;
     }
@@ -34,10 +36,16 @@ public class GameMaster : MonoBehaviour {
         Xcount = 0;
         Ocount = 0;
         if (Moves[MoveNumber] == "X") {
-            planeToBuild = PlaneXprefab;
+            planeToBuild = xMaterial;
         } else {
-            planeToBuild = PlaneOprefab;
+            planeToBuild = oMaterial;
         }
+        /*
+            Bilmiyorum ama büyük ihtimalle aşağıda bir yerde oComboMaterial
+            ve xComboMaterial kullanıp materyali değiştirmen lazım. Satır 87
+            ve sonrasında büyük ihtimalle. Buton isimlerini kullanmak için
+            2D array yaptın ben anlamadım şu an ne yapmam lazım.
+        */
         Xcount += Check (Red, "X");
         Xcount += Check (Green, "X");
         Xcount += Check (Yellow, "X");
@@ -50,8 +58,8 @@ public class GameMaster : MonoBehaviour {
         Debug.Log ("O= " + Ocount);
     }
 
-    private GameObject planeToBuild;
-    public GameObject GetPlaneBuild () {
+    private Material planeToBuild;
+    public Material GetPlaneBuild () {
         return planeToBuild;
     }
 
@@ -59,6 +67,15 @@ public class GameMaster : MonoBehaviour {
     public GameObject GetParticle () {
         return particle;
     }
+
+    //------------------------
+
+    /*
+    private Material comboToMake;
+    public Material GetComboMaterial () {
+        return comboToMake;
+    }
+    */
 
     private GameObject comboParticle;
     public GameObject GetComboParticle () {

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Button : MonoBehaviour {
     private GameObject plane;
-    private GameObject planet;
+    private GameObject planeParticle;
     public Vector3 offset;
+    public Material materialXO;
+    Renderer rende;
 
     void OnMouseDown () {
         if (plane != null) {
@@ -13,15 +15,20 @@ public class Button : MonoBehaviour {
             return;
         }
         //plane yerleştir hamle yap
-        GameObject planeToBuild = GameMaster.instance.GetPlaneBuild ();
         GameObject particle = GameMaster.instance.GetParticle ();
-        plane = (GameObject) Instantiate (planeToBuild, transform.position + offset, transform.rotation);
-        planet = (GameObject) Instantiate (particle, transform.position + offset + new Vector3 (0f, 1f, 0f), transform.rotation);
+        Material materialXO = GameMaster.instance.GetPlaneBuild ();
+
+        rende = GetComponent<Renderer> ();
+        rende.enabled = true;
+        rende.sharedMaterial = materialXO;
+
+        planeParticle = (GameObject) Instantiate (particle, transform.position + offset + new Vector3 (0f, 1f, 0f), transform.rotation);
         changeArray (this.name);
         GameMaster.instance.MoveNumber++;
-        Destroy(planet, 2f);
-        Destroy(this.gameObject);
+        Destroy (planeParticle, 2f);
+        //Destroy(this.gameObject); To destroy the plane at the correct time. Use when necessary.
     }
+
     void changeArray (string ButtonName) {
         string check = ButtonName;
         switch (check) {
@@ -111,7 +118,6 @@ public class Button : MonoBehaviour {
             case "25":
                 GameMaster.instance.Blue[8, 0] = GameMaster.instance.Moves[GameMaster.instance.MoveNumber];
                 break;
-
         }
     }
 }
