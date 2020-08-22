@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Mirror;
 
-public class GameMaster :MonoBehaviour {
+public class GameMaster : MonoBehaviour {
     public string[] Moves = new string[26] { "X", "O", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X" };
     public string[, ] Red = new string[9, 3] { { "", "1", "" }, { "", "2", "" }, { "", "3", "" }, { "", "6", "" }, { "", "7", "" }, { "", "8", "" }, { "", "11", "" }, { "", "12", "" }, { "", "13", "" } };
     public string[, ] Blue = new string[9, 3] { { "", "13", "" }, { "", "14", "" }, { "", "15", "" }, { "", "18", "" }, { "", "19", "" }, { "", "20", "" }, { "", "23", "" }, { "", "24", "" }, { "", "25", "" } };
@@ -16,22 +16,30 @@ public class GameMaster :MonoBehaviour {
         instance = this;
     }
 
-    //[SyncVar]
+    ////[SyncVar]
     public Material xMaterial;
+
+    ////[SyncVar]
     public Material oMaterial;
+
+    ////[SyncVar]
     public Material xComboMaterial;
+
+    ////[SyncVar]
     public Material oComboMaterial;
+
+    //[SyncVar]
     public GameObject SummonParticle;
+
+    //[SyncVar]
     public GameObject ComboParticle;
 
-    
     void Start () {
         planeToBuild = xMaterial;
         particle = SummonParticle;
         comboParticle = ComboParticle;
     }
 
-    
     void Update () {
         Xcount = 0;
         Ocount = 0;
@@ -71,7 +79,6 @@ public class GameMaster :MonoBehaviour {
         return comboParticle;
     }
 
-    
     public int Check (string[, ] checker, string Word) {
 
         int count = 0;

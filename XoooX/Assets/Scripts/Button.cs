@@ -6,7 +6,7 @@ public class Button : MonoBehaviour {
     public Vector3 offset;
     public Material materialXO;
     Renderer rende;
-    
+
     void OnMouseDown () {
         if (CheckMaterial != null) {
             Debug.Log ("Illegal move!");
@@ -15,7 +15,7 @@ public class Button : MonoBehaviour {
         //plane yerleştir hamle yap
         GameObject particle = GameMaster.instance.GetParticle ();
         Material materialXO = GameMaster.instance.GetPlaneBuild ();
-        CheckMaterial=materialXO;
+        CheckMaterial = materialXO;
         rende = GetComponent<Renderer> ();
         rende.enabled = true;
         rende.sharedMaterial = materialXO;
