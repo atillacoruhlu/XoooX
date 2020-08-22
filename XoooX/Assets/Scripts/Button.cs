@@ -8,6 +8,7 @@ public class Button : MonoBehaviour {
     Renderer rende;
 
     void OnMouseDown () {
+        //plane önceden tıklanıp tıklanmadıgının kontrolu
         if (CheckMaterial != null) {
             Debug.Log ("Illegal move!");
             return;
@@ -22,14 +23,16 @@ public class Button : MonoBehaviour {
 
         planeParticle = (GameObject) Instantiate (particle, transform.position + offset + new Vector3 (0f, 1f, 0f), transform.rotation);
         changeArray (this.name);
+        //hamleyi yazdırdıktan sonra hamle sırasını arttırıyoruz
         GameMaster.instance.MoveNumber++;
         Destroy (planeParticle, 2f);
         //Destroy(this.gameObject); To destroy the plane at the correct time. Use when necessary.
     }
-
+    //game master da bulunan arraylerin içine hangi butona hangi hamlenin yapıldığını kaydet
     void changeArray (string ButtonName) {
         string check = ButtonName;
         switch (check) {
+           //bastığımız butona göre array öğelerinin 0. kısmına moves arrayindeki hamleyi yazıyoruz
             case "1":
                 GameMaster.instance.Red[0, 0] = GameMaster.instance.Moves[GameMaster.instance.MoveNumber];
                 break;

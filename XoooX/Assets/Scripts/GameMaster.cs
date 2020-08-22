@@ -12,6 +12,7 @@ public class GameMaster : MonoBehaviour {
     public int Ocount = 0;
     public static GameMaster instance;
 
+    //ilk olarak gamemasterdan örnek oluşturuyoruz
     void Awake () {
         instance = this;
     }
@@ -33,7 +34,7 @@ public class GameMaster : MonoBehaviour {
 
     //[SyncVar]
     public GameObject ComboParticle;
-
+    
     void Start () {
         planeToBuild = xMaterial;
         particle = SummonParticle;
@@ -43,12 +44,13 @@ public class GameMaster : MonoBehaviour {
     void Update () {
         Xcount = 0;
         Ocount = 0;
+        //moves taki hamleye göre materyali belirtiyoruz
         if (Moves[MoveNumber] == "X") {
             planeToBuild = xMaterial;
         } else {
             planeToBuild = oMaterial;
         }
-
+        //comboları belirleyip puan değişkenine atıyoruz
         Xcount += Check (Red, "X");
         Xcount += Check (Green, "X");
         Xcount += Check (Yellow, "X");
@@ -78,7 +80,9 @@ public class GameMaster : MonoBehaviour {
     public GameObject GetComboParticle () {
         return comboParticle;
     }
-
+    //comboları karşılaştırıp kaçtane olduğunu değişkene atıyoruz
+    //Yapılan hamleye göre renk ve material değişimini gerçekleştiriyoruz
+    //comboların değiştiğini array öğelerinin 2.elemanına kaydediyoruz
     public int Check (string[, ] checker, string Word) {
 
         int count = 0;
@@ -117,7 +121,8 @@ public class GameMaster : MonoBehaviour {
         }
         return count;
     }
-
+    //arrayyin 2.öğesini denetliyerek değişiklik yapılmamışsa yapılmasını sağlıyoruz
+    //abjennin materilini değiştiriyoruz ve combo particallerini yaratıyoruz
     public void ChangePlaneColor (string[, ] rausch, int xeculus1, int xeculus2, int xeculus3, Material material_) {
 
         if (rausch[xeculus1, 2] == "" || rausch[xeculus2, 2] == "" || rausch[xeculus3, 2] == "") {
