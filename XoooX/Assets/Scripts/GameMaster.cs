@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using Mirror;
+//using Mirror;
 
 public class GameMaster : MonoBehaviour {
     public string[] Moves = new string[26] { "X", "O", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X" };
@@ -17,16 +17,16 @@ public class GameMaster : MonoBehaviour {
         instance = this;
     }
 
-    ////[SyncVar]
+    //[SyncVar]
     public Material xMaterial;
 
-    ////[SyncVar]
+    //[SyncVar]
     public Material oMaterial;
 
-    ////[SyncVar]
+    //[SyncVar]
     public Material xComboMaterial;
 
-    ////[SyncVar]
+    //[SyncVar]
     public Material oComboMaterial;
 
     //[SyncVar]
