@@ -1,10 +1,14 @@
 using UnityEngine;
 
 public class Button : MonoBehaviour {
+
+    // SyncVar obje yüklendikten sonra OnMouseDown'a bağlanıp o metod ile birlikte senkronize etmeye çalışıyor.
+    // Hooktan çağırıldığı için, fonksiyon SADECE client'de çalışacak.
+    //[SyncVar(hook = nameof(OnMouseDown))] Bu, onmousedown'a old value ve new value alanları olmasını şart koşuyor.
     private Material CheckMaterial;
     private GameObject planeParticle;
-    public Vector3 offset;
     public Material materialXO;
+    public Vector3 offset;
     Renderer rende;
 
     void OnMouseDown () {
@@ -15,7 +19,7 @@ public class Button : MonoBehaviour {
         }
         //plane yerleştir hamle yap
         GameObject particle = GameMaster.instance.GetParticle ();
-        Material materialXO = GameMaster.instance.GetPlaneBuild ();
+        materialXO = GameMaster.instance.GetPlaneBuild ();
         CheckMaterial = materialXO;
         rende = GetComponent<Renderer> ();
         rende.enabled = true;
@@ -28,6 +32,7 @@ public class Button : MonoBehaviour {
         Destroy (planeParticle, 2f);
         //Destroy(this.gameObject); To destroy the plane at the correct time. Use when necessary.
     }
+    
     //game master da bulunan arraylerin içine hangi butona hangi hamlenin yapıldığını kaydet
     void changeArray (string ButtonName) {
         string check = ButtonName;

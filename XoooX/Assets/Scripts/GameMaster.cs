@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-//using Mirror;
 
 public class GameMaster : MonoBehaviour {
     public string[] Moves = new string[26] { "X", "O", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X" };
@@ -126,13 +125,13 @@ public class GameMaster : MonoBehaviour {
     public void ChangePlaneColor (string[, ] rausch, int xeculus1, int xeculus2, int xeculus3, Material material_) {
 
         if (rausch[xeculus1, 2] == "" || rausch[xeculus2, 2] == "" || rausch[xeculus3, 2] == "") {
-            GameObject.Find ("Planes/" + rausch[xeculus1, 1]).GetComponent<Renderer> ().sharedMaterial = material_;
-            GameObject.Find ("Planes/" + rausch[xeculus2, 1]).GetComponent<Renderer> ().sharedMaterial = material_;
-            GameObject.Find ("Planes/" + rausch[xeculus3, 1]).GetComponent<Renderer> ().sharedMaterial = material_;
+            GameObject.Find (rausch[xeculus1, 1]).GetComponent<Renderer> ().sharedMaterial = material_;
+            GameObject.Find (rausch[xeculus2, 1]).GetComponent<Renderer> ().sharedMaterial = material_;
+            GameObject.Find (rausch[xeculus3, 1]).GetComponent<Renderer> ().sharedMaterial = material_;
 
-            Instantiate (ComboParticle, GameObject.Find ("Planes/" + rausch[xeculus1, 1]).transform.position, GameObject.Find ("Planes/" + rausch[xeculus1, 1]).transform.rotation);
-            Instantiate (ComboParticle, GameObject.Find ("Planes/" + rausch[xeculus2, 1]).transform.position, GameObject.Find ("Planes/" + rausch[xeculus2, 1]).transform.rotation);
-            Instantiate (ComboParticle, GameObject.Find ("Planes/" + rausch[xeculus3, 1]).transform.position, GameObject.Find ("Planes/" + rausch[xeculus3, 1]).transform.rotation);
+            Instantiate (ComboParticle, GameObject.Find (rausch[xeculus1, 1]).transform.position, GameObject.Find (rausch[xeculus1, 1]).transform.rotation);
+            Instantiate (ComboParticle, GameObject.Find (rausch[xeculus2, 1]).transform.position, GameObject.Find (rausch[xeculus2, 1]).transform.rotation);
+            Instantiate (ComboParticle, GameObject.Find (rausch[xeculus3, 1]).transform.position, GameObject.Find (rausch[xeculus3, 1]).transform.rotation);
         }
 
     }

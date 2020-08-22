@@ -86,17 +86,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10244}
     - Class: 114
-      Script: {instanceID: 10424}
-    - Class: 114
-      Script: {instanceID: 10792}
+      Script: {instanceID: 10426}
     - Class: 114
       Script: {instanceID: 10794}
     - Class: 114
-      Script: {instanceID: 11620}
+      Script: {instanceID: 10796}
     - Class: 114
-      Script: {instanceID: 11954}
+      Script: {instanceID: 11624}
     - Class: 114
-      Script: {instanceID: 11976}
+      Script: {instanceID: 11958}
+    - Class: 114
+      Script: {instanceID: 11980}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -127,11 +127,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9996}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 11104}
     - Class: 114
-      Script: {instanceID: 11452}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11620}
+      Script: {instanceID: 11624}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -188,7 +188,7 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: d28342da92d9c32514e0b524f5dd80be
+      Hash: 1cffcff990da008b8c1a7331519e3379
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Button
@@ -758,6 +758,12 @@ ScriptsOnlyBuild:
     className: MultiplexTransport
   - hash:
       serializedVersion: 2
+      Hash: 5886e078859ef47551e64e5f26881700
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Test
+  - hash:
+      serializedVersion: 2
       Hash: 303ad70ce203ad874efe2965d0fbcff9
     assemblyName: Unity.Analytics.Tracker.dll
     namespaceName: UnityEngine.Analytics
@@ -782,7 +788,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: bc61a4de32d4a67d017a6adf200dbe67
+      Hash: 6a674dd047cdcddaeb9756e2375a3ee3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameMaster
@@ -942,6 +948,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: dd1544de412f92b32f1c6671123b3745
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Mirror.Examples.Basic
+    className: Player
   - hash:
       serializedVersion: 2
       Hash: 35a9693c388776aaf487636491a20f11
