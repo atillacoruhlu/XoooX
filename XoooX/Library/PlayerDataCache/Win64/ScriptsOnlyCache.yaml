@@ -80,11 +80,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9816}
     - Class: 114
-      Script: {instanceID: 10028}
+      Script: {instanceID: 10030}
     - Class: 114
-      Script: {instanceID: 10066}
+      Script: {instanceID: 10068}
     - Class: 114
-      Script: {instanceID: 10244}
+      Script: {instanceID: 10246}
     - Class: 114
       Script: {instanceID: 10426}
     - Class: 114
@@ -92,11 +92,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10796}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 11626}
     - Class: 114
-      Script: {instanceID: 11958}
+      Script: {instanceID: 11962}
     - Class: 114
-      Script: {instanceID: 11980}
+      Script: {instanceID: 11984}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -125,13 +125,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9508}
     - Class: 114
-      Script: {instanceID: 9996}
+      Script: {instanceID: 9998}
     - Class: 114
-      Script: {instanceID: 11104}
+      Script: {instanceID: 11106}
     - Class: 114
-      Script: {instanceID: 11456}
+      Script: {instanceID: 11458}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 11626}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -674,6 +674,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 5da7b9e4b43d0ba75d617a81259ec141
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Mirror.Examples.Chat
+    className: ChatWindow
+  - hash:
+      serializedVersion: 2
       Hash: 63d7b9b64a11859f416d72ba9a3c3fec
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -756,12 +762,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: Mirror
     className: MultiplexTransport
-  - hash:
-      serializedVersion: 2
-      Hash: 5886e078859ef47551e64e5f26881700
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Test
   - hash:
       serializedVersion: 2
       Hash: 303ad70ce203ad874efe2965d0fbcff9
@@ -854,7 +854,7 @@ ScriptsOnlyBuild:
     className: PostProcessResources
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Score
@@ -918,6 +918,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
     className: NetworkPingDisplay
+  - hash:
+      serializedVersion: 2
+      Hash: 56e228cbcee3ed2e779d55e241ac9a04
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Mirror.Examples.Chat
+    className: ChatNetworkManager
   - hash:
       serializedVersion: 2
       Hash: 42a930c6b13af0df34d41f5b19ec8152
@@ -1106,6 +1112,12 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: 9b5a106d716e10dbf0635b1180cc5e67
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Mirror.Examples.Chat
+    className: Player
+  - hash:
+      serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1193,4 +1205,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Offline_Scene.unity
   - Assets/Scenes/Room_Scene.unity
   - Assets/Scenes/Game_Scene.unity
-  playerPath: D:/Unity Projects/XoooX/XoooX/Builds/XoooX.exe
+  playerPath: C:/Users/atill/Documents/build/XoooX.exe
