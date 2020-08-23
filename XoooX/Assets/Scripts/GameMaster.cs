@@ -17,6 +17,7 @@ public class GameMaster : NetworkBehaviour
     #region Variables
     [SyncVar(hook=nameof(moveAdvance))]
     public int MoveNumber = 0;
+
     public int Xcount = 0;
     public int Ocount = 0;
     private int planeToBuild;
@@ -27,8 +28,9 @@ public class GameMaster : NetworkBehaviour
     private GameObject particle;
     private GameObject comboParticle;
     #endregion
-    public void moveAdvance(){
-        MoveNumber+=1;
+
+    public void moveAdvance(int _oldint, int _newint){
+        MoveNumber = _newint;
     }
     [System.Serializable]
     public class SyncListTuple : SyncList<Item> { }
@@ -39,17 +41,17 @@ public class GameMaster : NetworkBehaviour
         public string a;
         public string b;
         public string c;
-
-
     }
-
-
 
     SyncListTuple syncRed = new SyncListTuple();
     SyncListTuple syncBlue = new SyncListTuple();
     SyncListTuple syncGreen = new SyncListTuple();
     SyncListTuple syncYellow = new SyncListTuple();
 
+    public override void OnStartServer()
+    {
+        base.OnStartServer();
+    }
 
     public void XOyaz(SyncListTuple _synctuple, string renk, string yazilacak, int yazilicakyer)
     {
@@ -87,16 +89,11 @@ public class GameMaster : NetworkBehaviour
         }
     }
 
-
-
-
-
     //ilk olarak gamemasterdan örnek oluşturuyoruz
     void Awake()
     {
         instance = this;
         _beginFill();
-
     }
 
     void Start()
@@ -132,6 +129,8 @@ public class GameMaster : NetworkBehaviour
         {
             GameObject.Find("1").GetComponent<Renderer>().sharedMaterial = materialXO[1];
         }
+
+        Debug.Log("Move Number: "+ MoveNumber);
     }
 
     public int GetPlaneBuild()

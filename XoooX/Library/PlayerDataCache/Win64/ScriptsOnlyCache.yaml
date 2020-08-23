@@ -66,37 +66,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9408}
+      Script: {instanceID: 9406}
     - Class: 114
-      Script: {instanceID: 9474}
+      Script: {instanceID: 9472}
     - Class: 114
-      Script: {instanceID: 9562}
+      Script: {instanceID: 9560}
     - Class: 114
-      Script: {instanceID: 9660}
+      Script: {instanceID: 9658}
     - Class: 114
-      Script: {instanceID: 9752}
+      Script: {instanceID: 9750}
     - Class: 114
-      Script: {instanceID: 9802}
+      Script: {instanceID: 9800}
     - Class: 114
-      Script: {instanceID: 9816}
+      Script: {instanceID: 9814}
     - Class: 114
-      Script: {instanceID: 10030}
+      Script: {instanceID: 10028}
     - Class: 114
-      Script: {instanceID: 10068}
+      Script: {instanceID: 10066}
     - Class: 114
-      Script: {instanceID: 10246}
+      Script: {instanceID: 10244}
     - Class: 114
-      Script: {instanceID: 10426}
+      Script: {instanceID: 10424}
+    - Class: 114
+      Script: {instanceID: 10792}
     - Class: 114
       Script: {instanceID: 10794}
     - Class: 114
-      Script: {instanceID: 10796}
+      Script: {instanceID: 11624}
     - Class: 114
-      Script: {instanceID: 11626}
+      Script: {instanceID: 11960}
     - Class: 114
-      Script: {instanceID: 11962}
-    - Class: 114
-      Script: {instanceID: 11984}
+      Script: {instanceID: 11982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -121,17 +121,17 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9428}
+      Script: {instanceID: 9426}
     - Class: 114
-      Script: {instanceID: 9508}
+      Script: {instanceID: 9506}
     - Class: 114
-      Script: {instanceID: 9998}
+      Script: {instanceID: 9996}
     - Class: 114
-      Script: {instanceID: 11106}
+      Script: {instanceID: 11104}
     - Class: 114
-      Script: {instanceID: 11458}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11626}
+      Script: {instanceID: 11624}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -1205,4 +1205,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Offline_Scene.unity
   - Assets/Scenes/Room_Scene.unity
   - Assets/Scenes/Game_Scene.unity
-  playerPath: C:/Users/atill/Documents/build/XoooX.exe
+  playerPath: D:/Unity Projects/XoooX/XoooX/Builds/XoooX.exe
