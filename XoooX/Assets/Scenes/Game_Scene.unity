@@ -418,7 +418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &61132233
 MonoBehaviour:
@@ -542,7 +543,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &114501773
 MonoBehaviour:
@@ -762,7 +764,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &154605381
 MonoBehaviour:
@@ -982,7 +985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &271838282
 MonoBehaviour:
@@ -1106,7 +1110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &290250437
 MonoBehaviour:
@@ -1230,7 +1235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &311952475
 MonoBehaviour:
@@ -1450,7 +1456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &407093317
 MonoBehaviour:
@@ -1670,7 +1677,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &508632113
 MonoBehaviour:
@@ -1890,7 +1898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &571519249
 MonoBehaviour:
@@ -2014,7 +2023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &576391603
 MonoBehaviour:
@@ -2138,7 +2148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &603611960
 MonoBehaviour:
@@ -2262,7 +2273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &606038170
 MonoBehaviour:
@@ -2386,7 +2398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &614385351
 MonoBehaviour:
@@ -2510,7 +2523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &621748800
 MonoBehaviour:
@@ -2821,7 +2835,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &766487376
 MonoBehaviour:
@@ -2988,7 +3003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &877151983
 MonoBehaviour:
@@ -3019,7 +3035,7 @@ GameObject:
   - component: {fileID: 886957266}
   - component: {fileID: 886957265}
   m_Layer: 0
-  m_Name: countText
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3033,11 +3049,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886957263}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.98, y: 0, z: 7.8350353}
+  m_LocalPosition: {x: -3, y: -1, z: 12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1967642807}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &886957265
 MonoBehaviour:
@@ -3051,6 +3067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdd5d97837e10649834351ef7b8bd17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!102 &886957266
 TextMesh:
   serializedVersion: 3
@@ -3547,7 +3565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1155390700
 MonoBehaviour:
@@ -3767,7 +3786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1243506748
 MonoBehaviour:
@@ -3987,7 +4007,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1282009123
 MonoBehaviour:
@@ -4399,7 +4420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1428071399
 MonoBehaviour:
@@ -4523,7 +4545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1449135721
 MonoBehaviour:
@@ -4647,7 +4670,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1454980938
 MonoBehaviour:
@@ -4771,7 +4795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1492639755
 MonoBehaviour:
@@ -5107,6 +5132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9861e3055b834254aac94442a8e786b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   Moves:
   - X
   - O
@@ -5137,10 +5164,12 @@ MonoBehaviour:
   MoveNumber: 0
   Xcount: 0
   Ocount: 0
-  xMaterial: {fileID: 2100000, guid: 13453fbd5d3f89a45adcc1bb5cec8fd4, type: 2}
-  oMaterial: {fileID: 2100000, guid: f7a21eb8e6bc7af4d84ebbdf3701ab46, type: 2}
-  xComboMaterial: {fileID: 2100000, guid: e87566b1aad2cb34594e766c4c888a49, type: 2}
-  oComboMaterial: {fileID: 2100000, guid: 44519df206100c24791f19c0b08a4737, type: 2}
+  materialXO:
+  - {fileID: 2100000, guid: 4959fab5f6949fc4196d68c20f90cf29, type: 2}
+  - {fileID: 2100000, guid: 13453fbd5d3f89a45adcc1bb5cec8fd4, type: 2}
+  - {fileID: 2100000, guid: f7a21eb8e6bc7af4d84ebbdf3701ab46, type: 2}
+  - {fileID: 2100000, guid: e87566b1aad2cb34594e766c4c888a49, type: 2}
+  - {fileID: 2100000, guid: 44519df206100c24791f19c0b08a4737, type: 2}
   SummonParticle: {fileID: 5926241847549675953, guid: f6bbae1947005294484aa1cc71e0e670,
     type: 3}
   ComboParticle: {fileID: 6808684378109360546, guid: d87555a265099fc4490a51c1e1deb576,
@@ -5377,7 +5406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1722934467
 MonoBehaviour:
@@ -5501,7 +5531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df46160a1a1f7d47adc748f96bcf855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialXO: {fileID: 0}
+  syncMode: 0
+  syncInterval: 0.1
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1769606512
 MonoBehaviour:
@@ -5790,37 +5821,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 294cbe883b01b9c41938346e74275de9, type: 3}
---- !u!1 &1967642806
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1967642807}
-  m_Layer: 0
-  m_Name: basic UI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1967642807
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967642806}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41967362, y: -1.0267181, z: 3.7749643}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 886957264}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2011899610
 GameObject:
   m_ObjectHideFlags: 0
