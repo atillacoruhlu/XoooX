@@ -15,13 +15,10 @@ public class GameMaster : NetworkBehaviour
     public string[,] Yellow = new string[9, 3] { { "", "11", "" }, { "", "12", "" }, { "", "13", "" }, { "", "16", "" }, { "", "17", "" }, { "", "18", "" }, { "", "21", "" }, { "", "22", "" }, { "", "23", "" } };
 
     #region Variables
-    [SyncVar]
+    [SyncVar(hook=nameof(moveAdvance))]
     public int MoveNumber = 0;
-    [SyncVar]
     public int Xcount = 0;
-    [SyncVar]
     public int Ocount = 0;
-    [SyncVar]
     private int planeToBuild;
     public static GameMaster instance;
     public Material[] materialXO;
@@ -30,6 +27,9 @@ public class GameMaster : NetworkBehaviour
     private GameObject particle;
     private GameObject comboParticle;
     #endregion
+    public void moveAdvance(){
+        MoveNumber+=1;
+    }
     [System.Serializable]
     public class SyncListTuple : SyncList<Item> { }
 
@@ -51,25 +51,30 @@ public class GameMaster : NetworkBehaviour
     SyncListTuple syncYellow = new SyncListTuple();
 
 
-    public void XOyaz(SyncListTuple _synctuple,string renk ,string yazilacak,int yazilicakyer)
+    public void XOyaz(SyncListTuple _synctuple, string renk, string yazilacak, int yazilicakyer)
     {
         Item item = new Item() { a = _synctuple[0].a, b = _synctuple[1].b, c = _synctuple[2].c };
-        item.a=yazilacak;
-        switch(renk)
-        {   case "red": syncRed[yazilicakyer]=item;
+        item.a = yazilacak;
+        switch (renk)
+        {
+            case "red":
+                syncRed[yazilicakyer] = item;
                 break;
-            case "green": syncGreen[yazilicakyer]=item;
+            case "green":
+                syncGreen[yazilicakyer] = item;
                 break;
-            case "yellow": syncYellow[yazilicakyer]=item;
+            case "yellow":
+                syncYellow[yazilicakyer] = item;
                 break;
-            case "blue": syncBlue[yazilicakyer]=item;
+            case "blue":
+                syncBlue[yazilicakyer] = item;
                 break;
         }
     }
     //arraylerdeki verileri senkron arraylere aktarma
     public void _beginFill()
     {
-        for (int i = 0; i < Red.Length/3; i++)
+        for (int i = 0; i < Red.Length / 3; i++)
         {
             Item item = new Item() { a = Red[i, 0], b = Red[i, 1], c = Red[i, 2] };
             syncRed.Add(item);
@@ -78,7 +83,7 @@ public class GameMaster : NetworkBehaviour
             Item item3 = new Item() { a = Yellow[i, 0], b = Yellow[i, 1], c = Yellow[i, 2] };
             syncYellow.Add(item);
             Item item4 = new Item() { a = Blue[i, 0], b = Blue[i, 1], c = Blue[i, 2] };
-            syncBlue.Add(item);            
+            syncBlue.Add(item);
         }
     }
 
@@ -123,7 +128,7 @@ public class GameMaster : NetworkBehaviour
         Ocount += Check(Green, "O");
         Ocount += Check(Yellow, "O");
         Ocount += Check(Blue, "O");
-        if(syncRed[0].a=="X")
+        if (syncRed[0].a == "X")
         {
             GameObject.Find("1").GetComponent<Renderer>().sharedMaterial = materialXO[1];
         }
@@ -210,98 +215,100 @@ public class GameMaster : NetworkBehaviour
 
     }
     //
-    public void changeArray (string ButtonName) {
+    public void changeArray(string ButtonName)
+    {
         GameObject.Find(ButtonName).GetComponent<Renderer>().sharedMaterial = materialXO[1];
-        switch (ButtonName) {
-           //bastığımız butona göre array öğelerinin 0. kısmına moves arrayindeki hamleyi yazıyoruz
+        switch (ButtonName)
+        {
+            //bastığımız butona göre array öğelerinin 0. kısmına moves arrayindeki hamleyi yazıyoruz
             case "1":
-               XOyaz(syncRed,"red",Moves[MoveNumber],0);
-              
+                XOyaz(syncRed, "red", Moves[MoveNumber], 0);
+
 
                 break;
             case "2":
-                XOyaz(syncRed,"red",Moves[MoveNumber],1);
+                XOyaz(syncRed, "red", Moves[MoveNumber], 1);
                 break;
             case "3":
-                XOyaz(syncRed,"red",Moves[MoveNumber],2);
-                XOyaz(syncGreen,"green",Moves[MoveNumber],0);
+                XOyaz(syncRed, "red", Moves[MoveNumber], 2);
+                XOyaz(syncGreen, "green", Moves[MoveNumber], 0);
 
                 break;
             case "4":
-                XOyaz(syncGreen,"green",Moves[MoveNumber],1);
+                XOyaz(syncGreen, "green", Moves[MoveNumber], 1);
                 break;
             case "5":
-                XOyaz(syncGreen,"green",Moves[MoveNumber],2);
+                XOyaz(syncGreen, "green", Moves[MoveNumber], 2);
                 break;
             case "6":
-                XOyaz(syncRed,"red",Moves[MoveNumber],3);
+                XOyaz(syncRed, "red", Moves[MoveNumber], 3);
                 break;
             case "7":
-                XOyaz(syncRed,"red",Moves[MoveNumber],4);
+                XOyaz(syncRed, "red", Moves[MoveNumber], 4);
                 break;
             case "8":
-                XOyaz(syncRed,"red",Moves[MoveNumber],5);
-                XOyaz(syncGreen,"green",Moves[MoveNumber],3);
+                XOyaz(syncRed, "red", Moves[MoveNumber], 5);
+                XOyaz(syncGreen, "green", Moves[MoveNumber], 3);
                 break;
             case "9":
-                XOyaz(syncGreen,"green",Moves[MoveNumber],4);
+                XOyaz(syncGreen, "green", Moves[MoveNumber], 4);
                 break;
             case "10":
-                XOyaz(syncGreen,"green",Moves[MoveNumber],5);
+                XOyaz(syncGreen, "green", Moves[MoveNumber], 5);
                 break;
             case "11":
-                XOyaz(syncRed,"red",Moves[MoveNumber],6);
-                XOyaz(syncYellow,"yellow",Moves[MoveNumber],0);
+                XOyaz(syncRed, "red", Moves[MoveNumber], 6);
+                XOyaz(syncYellow, "yellow", Moves[MoveNumber], 0);
                 break;
             case "12":
-                XOyaz(syncRed,"red",Moves[MoveNumber],7);
-                XOyaz(syncYellow,"yellow",Moves[MoveNumber],1);
+                XOyaz(syncRed, "red", Moves[MoveNumber], 7);
+                XOyaz(syncYellow, "yellow", Moves[MoveNumber], 1);
                 break;
             case "13":
-                XOyaz(syncRed,"red",Moves[MoveNumber],8);
-                XOyaz(syncGreen,"green",Moves[MoveNumber],6);
-                XOyaz(syncYellow,"yellow",Moves[MoveNumber],2);
-                XOyaz(syncBlue,"blue",Moves[MoveNumber],0);
+                XOyaz(syncRed, "red", Moves[MoveNumber], 8);
+                XOyaz(syncGreen, "green", Moves[MoveNumber], 6);
+                XOyaz(syncYellow, "yellow", Moves[MoveNumber], 2);
+                XOyaz(syncBlue, "blue", Moves[MoveNumber], 0);
                 break;
             case "14":
-                XOyaz(syncGreen,"green",Moves[MoveNumber],7);
-                XOyaz(syncBlue,"blue",Moves[MoveNumber],1);
+                XOyaz(syncGreen, "green", Moves[MoveNumber], 7);
+                XOyaz(syncBlue, "blue", Moves[MoveNumber], 1);
                 break;
             case "15":
-                XOyaz(syncGreen,"green",Moves[MoveNumber],8);
-                XOyaz(syncBlue,"blue",Moves[MoveNumber],2);
+                XOyaz(syncGreen, "green", Moves[MoveNumber], 8);
+                XOyaz(syncBlue, "blue", Moves[MoveNumber], 2);
                 break;
             case "16":
-                XOyaz(syncYellow,"yellow",Moves[MoveNumber],3);
+                XOyaz(syncYellow, "yellow", Moves[MoveNumber], 3);
                 break;
             case "17":
-                XOyaz(syncYellow,"yellow",Moves[MoveNumber],4);
+                XOyaz(syncYellow, "yellow", Moves[MoveNumber], 4);
                 break;
             case "18":
-                XOyaz(syncYellow,"yellow",Moves[MoveNumber],5);
-                XOyaz(syncBlue,"blue",Moves[MoveNumber],3);
+                XOyaz(syncYellow, "yellow", Moves[MoveNumber], 5);
+                XOyaz(syncBlue, "blue", Moves[MoveNumber], 3);
                 break;
             case "19":
-                 XOyaz(syncBlue,"blue",Moves[MoveNumber],4);
+                XOyaz(syncBlue, "blue", Moves[MoveNumber], 4);
                 break;
             case "20":
-                 XOyaz(syncBlue,"blue",Moves[MoveNumber],5);
+                XOyaz(syncBlue, "blue", Moves[MoveNumber], 5);
                 break;
             case "21":
-                XOyaz(syncYellow,"yellow",Moves[MoveNumber],6);
+                XOyaz(syncYellow, "yellow", Moves[MoveNumber], 6);
                 break;
             case "22":
-                XOyaz(syncYellow,"yellow",Moves[MoveNumber],7);
+                XOyaz(syncYellow, "yellow", Moves[MoveNumber], 7);
                 break;
             case "23":
-                XOyaz(syncYellow,"yellow",Moves[MoveNumber],8);
-                XOyaz(syncBlue,"blue",Moves[MoveNumber],6);
+                XOyaz(syncYellow, "yellow", Moves[MoveNumber], 8);
+                XOyaz(syncBlue, "blue", Moves[MoveNumber], 6);
                 break;
             case "24":
-                XOyaz(syncBlue,"blue",Moves[MoveNumber],7);
+                XOyaz(syncBlue, "blue", Moves[MoveNumber], 7);
                 break;
             case "25":
-                XOyaz(syncBlue,"blue",Moves[MoveNumber],8);
+                XOyaz(syncBlue, "blue", Moves[MoveNumber], 8);
                 break;
         }
     }
