@@ -1205,4 +1205,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Offline_Scene.unity
   - Assets/Scenes/Room_Scene.unity
   - Assets/Scenes/Game_Scene.unity
-  playerPath: C:/Users/atill/Documents/XoooX/build/XoooX.exe
+  playerPath: D:/Unity Projects/XoooX/XoooX/Builds/XoooX.exe

@@ -12,18 +12,27 @@ public class Button : NetworkBehaviour {
     public Vector3 offset;
 
     void OnMouseDown () {
+        if (!isServer && GameMaster.instance.Moves[GameMaster.instance.MoveNumber] == "O") {
+            ButtonLogic ();
+        } else if (isServer && GameMaster.instance.Moves[GameMaster.instance.MoveNumber] == "X") {
+            ButtonLogic ();
+        }
+
+    }
+
+    void ButtonLogic () {
         //Önceden materyali değişti mi kontrolü. Değiştiyse eğer Tıklama anında Button.cs scriptini durduruyor.
         if (CheckMaterial == 1) {
             Debug.Log ("Illegal move!");
             return;
         }
         CheckMaterial = 1;
-        
+
         CmdClickIncrease ();
 
         //Particle spawnlama eventi.
         Destroy ((GameObject) Instantiate (GameMaster.instance.GetParticle (), transform.position + offset + new Vector3 (0f, 1f, 0f), transform.rotation), 2f);
-        CmdSendButtonName();
+        CmdSendButtonName ();
         //Spawnlanan particle'ın ömrü bittiğinden hemen sonra hiyerarşiden yok olması için.
     }
 
@@ -34,6 +43,6 @@ public class Button : NetworkBehaviour {
 
     [Command (ignoreAuthority = true)]
     private void CmdSendButtonName () {
-        GameMaster.instance.RpcChangeArray(this.name);
+        GameMaster.instance.RpcChangeArray (this.name);
     }
 }
