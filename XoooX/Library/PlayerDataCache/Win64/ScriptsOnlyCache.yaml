@@ -1,11 +1,15 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AudioManager
     - Button
     - GameMaster
+    - Menu
     - Mirror.Examples.NetworkRoom.NetworkRoomManagerExt
     - Mirror.Examples.NetworkRoom.NetworkRoomPlayerExt
     - Score
+    - SoundToggle
+    - SoundTracker
     - UnityTemplateProjects.SimpleCameraController
     Mirror.Components.dll:
     - Mirror.NetworkRoomPlayer
@@ -26,11 +30,17 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.LWRP.ForwardRendererData
     - UnityEngine.Rendering.LWRP.LWRPAdditionalCameraData
     - UnityEngine.Rendering.LWRP.LightweightRenderPipelineAsset
+    - UnityEngine.Rendering.LWRP.LightweightRenderPipelineEditorResources
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Game_Scene.unity:
     - Class: 1
@@ -70,33 +80,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9472}
     - Class: 114
-      Script: {instanceID: 9560}
+      Script: {instanceID: 9558}
     - Class: 114
-      Script: {instanceID: 9658}
+      Script: {instanceID: 9656}
     - Class: 114
-      Script: {instanceID: 9750}
+      Script: {instanceID: 9748}
     - Class: 114
-      Script: {instanceID: 9800}
+      Script: {instanceID: 9798}
     - Class: 114
-      Script: {instanceID: 9814}
+      Script: {instanceID: 9812}
     - Class: 114
-      Script: {instanceID: 10028}
+      Script: {instanceID: 10022}
     - Class: 114
-      Script: {instanceID: 10066}
+      Script: {instanceID: 10060}
     - Class: 114
-      Script: {instanceID: 10244}
+      Script: {instanceID: 10238}
     - Class: 114
-      Script: {instanceID: 10424}
+      Script: {instanceID: 10418}
     - Class: 114
-      Script: {instanceID: 10792}
+      Script: {instanceID: 10786}
     - Class: 114
-      Script: {instanceID: 10794}
+      Script: {instanceID: 10788}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 11610}
     - Class: 114
-      Script: {instanceID: 11960}
+      Script: {instanceID: 11944}
     - Class: 114
-      Script: {instanceID: 11982}
+      Script: {instanceID: 11966}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -106,6 +116,63 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    Assets/Scenes/Menu_Scene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9740}
+    - Class: 114
+      Script: {instanceID: 9742}
+    - Class: 114
+      Script: {instanceID: 9748}
+    - Class: 114
+      Script: {instanceID: 9754}
+    - Class: 114
+      Script: {instanceID: 9762}
+    - Class: 114
+      Script: {instanceID: 9798}
+    - Class: 114
+      Script: {instanceID: 9800}
+    - Class: 114
+      Script: {instanceID: 14224}
+    - Class: 114
+      Script: {instanceID: 14226}
+    - Class: 114
+      Script: {instanceID: 14228}
+    - Class: 114
+      Script: {instanceID: 16524}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
     Assets/Scenes/Offline_Scene.unity:
     - Class: 1
@@ -125,13 +192,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9506}
     - Class: 114
-      Script: {instanceID: 9996}
+      Script: {instanceID: 9992}
     - Class: 114
-      Script: {instanceID: 11104}
+      Script: {instanceID: 11092}
     - Class: 114
-      Script: {instanceID: 11456}
+      Script: {instanceID: 11442}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 11610}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -216,12 +283,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: Mirror
     className: NetworkManagerHUD
-  - hash:
-      serializedVersion: 2
-      Hash: 192ca9716d03752ea1d90a78bc2daac9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Mirror.Examples.NetworkRoom
-    className: RandomColor
   - hash:
       serializedVersion: 2
       Hash: 71f7f12b8d0f4fd73590db8bcb6d453c
@@ -674,12 +735,6 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 5da7b9e4b43d0ba75d617a81259ec141
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Mirror.Examples.Chat
-    className: ChatWindow
-  - hash:
-      serializedVersion: 2
       Hash: 63d7b9b64a11859f416d72ba9a3c3fec
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -690,12 +745,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
-  - hash:
-      serializedVersion: 2
-      Hash: d5b39c54cd3b8db955940e7482d69ad7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Mirror.Examples.NetworkRoom
-    className: Spawner
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -872,12 +921,6 @@ ScriptsOnlyBuild:
     className: AutoExposure
   - hash:
       serializedVersion: 2
-      Hash: 16a720ee1ef3f470f479041a1e75bdc1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Mirror.Examples.NetworkRoom
-    className: PlayerController
-  - hash:
-      serializedVersion: 2
       Hash: 50c443b12ccc0b475183318b5088bcc5
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -896,12 +939,6 @@ ScriptsOnlyBuild:
     className: VolumeProfile
   - hash:
       serializedVersion: 2
-      Hash: 4c790fa3b7c93033baa4406ca5ac8c04
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Mirror.Examples.NetworkRoom
-    className: Reward
-  - hash:
-      serializedVersion: 2
       Hash: c177d6dc65292742571518e34ec88561
     assemblyName: Mirror.dll
     namespaceName: Mirror
@@ -918,12 +955,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
     className: NetworkPingDisplay
-  - hash:
-      serializedVersion: 2
-      Hash: 56e228cbcee3ed2e779d55e241ac9a04
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Mirror.Examples.Chat
-    className: ChatNetworkManager
   - hash:
       serializedVersion: 2
       Hash: 42a930c6b13af0df34d41f5b19ec8152
@@ -954,12 +985,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: dd1544de412f92b32f1c6671123b3745
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Mirror.Examples.Basic
-    className: Player
   - hash:
       serializedVersion: 2
       Hash: 35a9693c388776aaf487636491a20f11
@@ -1112,12 +1137,6 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: 9b5a106d716e10dbf0635b1180cc5e67
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Mirror.Examples.Chat
-    className: Player
-  - hash:
-      serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1178,12 +1197,6 @@ ScriptsOnlyBuild:
     className: NetworkProximityChecker
   - hash:
       serializedVersion: 2
-      Hash: 88e3b86c3ab08e02b94869c8fc5ce863
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Mirror.Examples.NetworkRoom
-    className: PlayerScore
-  - hash:
-      serializedVersion: 2
       Hash: 8649814970b42d345b89944b862453cc
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1200,8 +1213,33 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a0db864326be4313c04766f10eb002a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundTracker
+  - hash:
+      serializedVersion: 2
+      Hash: 5b9a3ecc97995d6bb9476db74eb17626
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundToggle
+  - hash:
+      serializedVersion: 2
+      Hash: 37a504ecf2cdb148d3a8bcb7d225eb24
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu
   platform: 19
   scenePathNames:
+  - Assets/Scenes/Menu_Scene.unity
   - Assets/Scenes/Offline_Scene.unity
   - Assets/Scenes/Room_Scene.unity
   - Assets/Scenes/Game_Scene.unity

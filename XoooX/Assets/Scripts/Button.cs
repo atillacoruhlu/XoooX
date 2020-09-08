@@ -32,6 +32,7 @@ public class Button : NetworkBehaviour {
 
         //Particle spawnlama eventi.
         Destroy ((GameObject) Instantiate (GameMaster.instance.GetParticle (), transform.position + offset + new Vector3 (0f, 1f, 0f), transform.rotation), 2f);
+        FindObjectOfType<AudioManager>().Play("Move");
         CmdSendButtonName ();
         //Spawnlanan particle'ın ömrü bittiğinden hemen sonra hiyerarşiden yok olması için.
     }
