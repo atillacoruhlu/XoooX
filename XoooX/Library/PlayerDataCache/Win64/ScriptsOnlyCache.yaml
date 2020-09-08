@@ -76,37 +76,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9406}
+      Script: {instanceID: 9410}
     - Class: 114
-      Script: {instanceID: 9472}
+      Script: {instanceID: 9476}
     - Class: 114
-      Script: {instanceID: 9558}
+      Script: {instanceID: 9562}
     - Class: 114
-      Script: {instanceID: 9656}
+      Script: {instanceID: 9660}
     - Class: 114
-      Script: {instanceID: 9748}
+      Script: {instanceID: 9754}
     - Class: 114
-      Script: {instanceID: 9798}
+      Script: {instanceID: 9804}
     - Class: 114
-      Script: {instanceID: 9812}
+      Script: {instanceID: 9818}
     - Class: 114
-      Script: {instanceID: 10022}
+      Script: {instanceID: 10032}
     - Class: 114
-      Script: {instanceID: 10060}
+      Script: {instanceID: 10070}
     - Class: 114
-      Script: {instanceID: 10238}
+      Script: {instanceID: 10248}
     - Class: 114
-      Script: {instanceID: 10418}
+      Script: {instanceID: 10428}
     - Class: 114
-      Script: {instanceID: 10786}
+      Script: {instanceID: 10796}
     - Class: 114
-      Script: {instanceID: 10788}
+      Script: {instanceID: 10798}
     - Class: 114
-      Script: {instanceID: 11610}
+      Script: {instanceID: 11624}
     - Class: 114
-      Script: {instanceID: 11944}
+      Script: {instanceID: 11958}
     - Class: 114
-      Script: {instanceID: 11966}
+      Script: {instanceID: 11980}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -137,27 +137,27 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9740}
+      Script: {instanceID: 9672}
     - Class: 114
-      Script: {instanceID: 9742}
+      Script: {instanceID: 9746}
     - Class: 114
       Script: {instanceID: 9748}
     - Class: 114
       Script: {instanceID: 9754}
     - Class: 114
-      Script: {instanceID: 9762}
+      Script: {instanceID: 9760}
     - Class: 114
-      Script: {instanceID: 9798}
+      Script: {instanceID: 9768}
     - Class: 114
-      Script: {instanceID: 9800}
+      Script: {instanceID: 9804}
     - Class: 114
-      Script: {instanceID: 14224}
+      Script: {instanceID: 9806}
     - Class: 114
-      Script: {instanceID: 14226}
+      Script: {instanceID: 9998}
     - Class: 114
-      Script: {instanceID: 14228}
+      Script: {instanceID: 10002}
     - Class: 114
-      Script: {instanceID: 16524}
+      Script: {instanceID: 11178}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -188,17 +188,17 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9426}
+      Script: {instanceID: 9430}
     - Class: 114
-      Script: {instanceID: 9506}
+      Script: {instanceID: 9510}
     - Class: 114
-      Script: {instanceID: 9992}
+      Script: {instanceID: 10000}
     - Class: 114
-      Script: {instanceID: 11092}
+      Script: {instanceID: 11102}
     - Class: 114
-      Script: {instanceID: 11442}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11610}
+      Script: {instanceID: 11624}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -331,6 +331,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: Mirror
     className: NetworkStartPosition
+  - hash:
+      serializedVersion: 2
+      Hash: a0db864326be4313c04766f10eb002a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioManager
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -741,10 +747,22 @@ ScriptsOnlyBuild:
     className: ScreenSpaceReflections
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundTracker
+  - hash:
+      serializedVersion: 2
       Hash: f3a8ccc18ad656ac8993b34a1b30984f
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
+  - hash:
+      serializedVersion: 2
+      Hash: 37a504ecf2cdb148d3a8bcb7d225eb24
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -993,6 +1011,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 5b9a3ecc97995d6bb9476db74eb17626
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundToggle
+  - hash:
+      serializedVersion: 2
       Hash: e1300922cc039f41ab46a47f4cb05898
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1213,30 +1237,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: a0db864326be4313c04766f10eb002a1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AudioManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SoundTracker
-  - hash:
-      serializedVersion: 2
-      Hash: 5b9a3ecc97995d6bb9476db74eb17626
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SoundToggle
-  - hash:
-      serializedVersion: 2
-      Hash: 37a504ecf2cdb148d3a8bcb7d225eb24
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Menu
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu_Scene.unity
