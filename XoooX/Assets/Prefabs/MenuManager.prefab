@@ -43,3 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfafb282fb331c64a98a2d9eabc78fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuCamera: {fileID: 4909600414463132884, guid: c6bf9b84d35b8054dbbec75fc47ffb57,
+    type: 3}
+  animator: {fileID: 0}
+  LevelName: 

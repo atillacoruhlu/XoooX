@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneId: 0
+  sceneId: 1509328859
   serverOnly: 0
-  m_AssetId: 5a8e692b52d2a3d4791d4a3a97c9eeb3
+  m_AssetId: 
   hasSpawned: 0
 --- !u!114 &2876888676215383958
 MonoBehaviour:

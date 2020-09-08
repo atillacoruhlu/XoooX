@@ -67,7 +67,6 @@ namespace Mirror.Examples.NetworkRoom
             {
                 // set to false to hide it in the game scene
                 showStartButton = false;
-
                 ServerChangeScene(GameplayScene);
             }
         }
