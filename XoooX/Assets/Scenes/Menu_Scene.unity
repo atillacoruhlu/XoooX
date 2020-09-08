@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1663,6 +1663,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147245837965802922, guid: 6c589546a1b93ca47a919036719b65eb,
         type: 3}
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147245837965802922, guid: 6c589546a1b93ca47a919036719b65eb,
+        type: 3}
       propertyPath: sounds.Array.data[0].pitch
       value: 1
       objectReference: {fileID: 0}
@@ -1674,6 +1679,41 @@ PrefabInstance:
     - target: {fileID: 3147245837965802922, guid: 6c589546a1b93ca47a919036719b65eb,
         type: 3}
       propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147245837965802922, guid: 6c589546a1b93ca47a919036719b65eb,
+        type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 33f29c79585e1e3488148e098cc1b814, type: 3}
+    - target: {fileID: 3147245837965802922, guid: 6c589546a1b93ca47a919036719b65eb,
+        type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 153d1dfc0bc5b774eb47836b39aa6fd2, type: 3}
+    - target: {fileID: 3147245837965802922, guid: 6c589546a1b93ca47a919036719b65eb,
+        type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: dd646b6868b8a9444aeae84e80d618fe, type: 3}
+    - target: {fileID: 3147245837965802922, guid: 6c589546a1b93ca47a919036719b65eb,
+        type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: GameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147245837965802922, guid: 6c589546a1b93ca47a919036719b65eb,
+        type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 841ba605c583fb94bb5b5f100a00301f, type: 3}
+    - target: {fileID: 3147245837965802922, guid: 6c589546a1b93ca47a919036719b65eb,
+        type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147245837965802922, guid: 6c589546a1b93ca47a919036719b65eb,
+        type: 3}
+      propertyPath: sounds.Array.data[3].pitch
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1690,6 +1730,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7825113084007070330, guid: 8c272085242ef1045a9e5fc098ca2ed8,
+        type: 3}
+      propertyPath: menuCamera
+      value: 
+      objectReference: {fileID: 4909600414463132884, guid: c6bf9b84d35b8054dbbec75fc47ffb57,
+        type: 3}
     - target: {fileID: 7825113084007070331, guid: 8c272085242ef1045a9e5fc098ca2ed8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1745,11 +1791,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7825113084007070330, guid: 8c272085242ef1045a9e5fc098ca2ed8,
-        type: 3}
-      propertyPath: menuCamera
-      value: 
-      objectReference: {fileID: 4909600414463132884, guid: c6bf9b84d35b8054dbbec75fc47ffb57,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c272085242ef1045a9e5fc098ca2ed8, type: 3}

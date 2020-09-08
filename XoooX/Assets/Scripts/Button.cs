@@ -12,6 +12,7 @@ public class Button : NetworkBehaviour {
     public Vector3 offset;
 
     void OnMouseDown () {
+        
         if (!isServer && GameMaster.instance.Moves[GameMaster.instance.MoveNumber] == "O") {
             ButtonLogic ();
         } else if (isServer && GameMaster.instance.Moves[GameMaster.instance.MoveNumber] == "X") {

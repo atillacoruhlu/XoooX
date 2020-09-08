@@ -154,7 +154,8 @@ public class GameMaster : NetworkBehaviour {
         GameObject.Find (a).GetComponent<Renderer> ().sharedMaterial = materialXO[material_];
         GameObject.Find (b).GetComponent<Renderer> ().sharedMaterial = materialXO[material_];
         GameObject.Find (c).GetComponent<Renderer> ().sharedMaterial = materialXO[material_];
-        FindObjectOfType<AudioManager>().Play("Combo");
+        //Üstüste binen 2 farklı ses istemiyoruz. Gereksiz şu an.
+        //FindObjectOfType<AudioManager>().Play("Combo");
         Destroy (Instantiate (ComboParticle, GameObject.Find (a).transform.position, GameObject.Find (a).transform.rotation), 2f);
         Destroy (Instantiate (ComboParticle, GameObject.Find (b).transform.position, GameObject.Find (b).transform.rotation), 2f);
         Destroy (Instantiate (ComboParticle, GameObject.Find (c).transform.position, GameObject.Find (c).transform.rotation), 2f);
