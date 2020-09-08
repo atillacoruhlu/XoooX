@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -299,19 +299,18 @@ MonoBehaviour:
   onlineScene: Assets/Scenes/Room_Scene.unity
   transport: {fileID: 2008127830}
   networkAddress: localhost
-  maxConnections: 5
+  maxConnections: 2
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 8364114913352022166, guid: d65bfcaac0837d949baea73a2cec3cb8,
     type: 3}
   autoCreatePlayer: 1
-  playerSpawnMethod: 1
-  spawnPrefabs:
-  - {fileID: 0}
+  playerSpawnMethod: 0
+  spawnPrefabs: []
   showRoomGUI: 1
   minPlayers: 1
-  roomPlayerPrefab: {fileID: 114033720796874720, guid: 5a8e692b52d2a3d4791d4a3a97c9eeb3,
+  roomPlayerPrefab: {fileID: 2934333493385615429, guid: 5a8e692b52d2a3d4791d4a3a97c9eeb3,
     type: 3}
   RoomScene: Assets/Scenes/Room_Scene.unity
   GameplayScene: Assets/Scenes/Game_Scene.unity
