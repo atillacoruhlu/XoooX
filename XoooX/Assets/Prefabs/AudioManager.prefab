@@ -46,22 +46,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: b0e69118f1db1dd4d9c57a26d560067a, type: 3}
+    clip: {fileID: 8300000, guid: 33f29c79585e1e3488148e098cc1b814, type: 3}
     loop: 1
-    volume: 1
-    pitch: 0
+    volume: 0.6
+    pitch: 1
     source: {fileID: 0}
   - name: Move
-    clip: {fileID: 8300000, guid: d45456a23b4833140890a198d3653c8d, type: 3}
+    clip: {fileID: 8300000, guid: 153d1dfc0bc5b774eb47836b39aa6fd2, type: 3}
     loop: 0
-    volume: 1
-    pitch: 0
+    volume: 0.6
+    pitch: 1
     source: {fileID: 0}
   - name: Combo
-    clip: {fileID: 8300000, guid: 7da1bd6cce956b742aa55f3e8772c2dc, type: 3}
+    clip: {fileID: 8300000, guid: dd646b6868b8a9444aeae84e80d618fe, type: 3}
     loop: 0
     volume: 1
-    pitch: 0
+    pitch: 1
+    source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 841ba605c583fb94bb5b5f100a00301f, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
 --- !u!114 &1558133097
 MonoBehaviour:
