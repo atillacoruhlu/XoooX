@@ -1,4 +1,5 @@
-﻿using Mirror;
+﻿using System;
+using Mirror;
 using UnityEngine;
 
 public class GameMaster : NetworkBehaviour {
@@ -27,6 +28,8 @@ public class GameMaster : NetworkBehaviour {
     public GameObject ComboParticle;
     private GameObject particle;
     private GameObject comboParticle;
+    public int minimaxBrain = 3;
+
     #endregion
 
     #region ButtonData
@@ -62,6 +65,10 @@ public class GameMaster : NetworkBehaviour {
     void Awake () {
         instance = this;
         _beginFill ();
+
+        if (NetworkServer.connections.Count == 1) {
+            MiniMax.board = new int[5, 5] { { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } };
+        }
     }
 
     [ServerCallback]
@@ -83,7 +90,7 @@ public class GameMaster : NetworkBehaviour {
         comboParticle = ComboParticle;
     }
 
-    void Update () {
+    void FixedUpdate () {
         Xcount = 0;
         Ocount = 0;
         //comboları belirleyip puan değişkenine atıyoruz
@@ -97,8 +104,18 @@ public class GameMaster : NetworkBehaviour {
         Ocount += Check (syncBlue, "O");
 
         //Count all F for X
-        xNumber = ComboCount("X");
-        oNumber = ComboCount("O");
+        xNumber = ComboCount ("X");
+        oNumber = ComboCount ("O");
+
+        //MiniMax
+        if (NetworkServer.connections.Count == 1) {
+            if (Moves[MoveNumber] == "O") {
+                int hamle = MiniMax.nextTurn ();
+                RpcChangeArray (hamle.ToString ());
+                GameObject.Find (hamle.ToString ()).GetComponent<Button> ().CheckMaterial = 1;
+                MoveNumber++;
+            }
+        }
     }
 
     public int Check (SyncListTuple checker, string Word) {
@@ -151,7 +168,7 @@ public class GameMaster : NetworkBehaviour {
     //Needs to be [ClientRpc] but It decides to stop working from time to time.
     public void RpcChangePlaneColor (SyncListTuple rausch, int dedicatedButton1, int dedicatedButton2, int dedicatedButton3, int material_) {
         if (rausch[dedicatedButton1].c == "" || rausch[dedicatedButton2].c == "" || rausch[dedicatedButton3].c == "") {
-            RpcComboGen(rausch[dedicatedButton1].b,rausch[dedicatedButton2].b,rausch[dedicatedButton3].b, material_);
+            RpcComboGen (rausch[dedicatedButton1].b, rausch[dedicatedButton2].b, rausch[dedicatedButton3].b, material_);
         }
     }
 
@@ -309,9 +326,8 @@ public class GameMaster : NetworkBehaviour {
 
     public int ComboCount (string Variable) {
         int temp = 0;
-        for (int i = 0; i<25; i++) {
-            if (GameObject.Find((i+1).ToString()).GetComponent<Renderer>().sharedMaterial.name == "Combo"+Variable)
-            {
+        for (int i = 0; i < 25; i++) {
+            if (GameObject.Find ((i + 1).ToString ()).GetComponent<Renderer> ().sharedMaterial.name == "Combo" + Variable) {
                 temp++;
             }
         }
