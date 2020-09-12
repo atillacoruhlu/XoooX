@@ -19,6 +19,8 @@ public class GameMaster : NetworkBehaviour {
     public int MoveNumber = 0;
     public int Xcount = 0;
     public int Ocount = 0;
+    public int xNumber = 0;
+    public int oNumber = 0;
     public static GameMaster instance;
     public Material[] materialXO;
     public GameObject SummonParticle;
@@ -93,6 +95,10 @@ public class GameMaster : NetworkBehaviour {
         Ocount += Check (syncGreen, "O");
         Ocount += Check (syncYellow, "O");
         Ocount += Check (syncBlue, "O");
+
+        //Count all F for X
+        xNumber = ComboCount("X");
+        oNumber = ComboCount("O");
     }
 
     public int Check (SyncListTuple checker, string Word) {
@@ -299,5 +305,16 @@ public class GameMaster : NetworkBehaviour {
                 syncBlue[yazilicakyer] = item;
                 break;
         }
+    }
+
+    public int ComboCount (string Variable) {
+        int temp = 0;
+        for (int i = 0; i<25; i++) {
+            if (GameObject.Find((i+1).ToString()).GetComponent<Renderer>().sharedMaterial.name == "Combo"+Variable)
+            {
+                temp++;
+            }
+        }
+        return temp;
     }
 }
