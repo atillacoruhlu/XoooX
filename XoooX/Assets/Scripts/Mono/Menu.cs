@@ -11,10 +11,6 @@ public class Menu : MonoBehaviour {
         Initiate.Fade ("Offline_Scene", Color.black, 2); //Loads Mirror
     }
 
-    public void PracticeButton () {
-        Initiate.Fade ("MiniMax_Scene", Color.black, 2); //Loads AI Scene
-    }
-
     public void TutorialButton () {
         Initiate.Fade ("Tutorial_Scene", Color.black, 2); //Loads tutorial
     }
