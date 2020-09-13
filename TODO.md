@@ -1,15 +1,7 @@
 
 # Planlar
 
-## Zorunluluklar
-
-- Tutorial ve Info ekranı ortala.
-- MiniMax efekt ve freeze muhabbeti.
-- Kazandın Kaybettin, lobiye dön.
-- Lobi ekranından ana menüye dön.
-- MiniMax eklenecek.
-
-### MiniMax Listesi
+## MiniMax Listesi
 
 |&#x1F499;|A|B|C|D|E|
 | :------: | -------- | -------- | :------: | -------- | -------- |
@@ -24,17 +16,13 @@ Combo bozma bonusu +3
 
 ## İyileştirmeler
 
+- Kazandın Kaybettin, lobiye dön.
 - SteamWorks ve Steam Achievements deneriz.
 - Port Forwarding olmadan multiplayer yapma çalışması.
 - Mirror Arayüzü.
 - Hamle Timerı.
 - Birkaç müzik seçeneği.
 - Ses sliderı.
-- MiniMax seviyeleri. Default derinlik 3 olsun.
-
-## Denemeler
-
-- Laptop ile bağlanam. Olursa Steamde Local COOP seçebiliriz.
 
 ## Release Öncesi
 

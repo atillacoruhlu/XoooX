@@ -28,6 +28,9 @@ public class GameMaster : NetworkBehaviour {
     public GameObject ComboParticle;
     private GameObject particle;
     private GameObject comboParticle;
+
+    [Header("MiniMax AI Specifications")]
+    public int minimaxDepth = 3;
     public int minimaxBrain = 3;
 
     #endregion

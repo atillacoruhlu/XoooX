@@ -220,7 +220,7 @@ public class MiniMax {
             #endregion
         }
 
-        //Impossible to beat. Medium to counter
+        //Hard to beat. Medium to counter
         if (GameMaster.instance.minimaxBrain >= 3) {
             #region Enemy Combo Sequences
             if (board[0, 0] == value && board[0,1] == -1 && board[0,2] == -1) {
@@ -524,7 +524,7 @@ public class MiniMax {
     }
 
     public static int _MiniMax (int[, ] board, int depth, bool isMaxing) {
-        if (depth == 4) {
+        if (depth == GameMaster.instance.minimaxDepth) {
             return countPoints (1); //Value is always 1, it is always "O"
         }
 

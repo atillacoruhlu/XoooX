@@ -448,6 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &61132233
 MonoBehaviour:
@@ -696,6 +697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &114501773
 MonoBehaviour:
@@ -931,6 +933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &154605381
 MonoBehaviour:
@@ -1166,6 +1169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &271838282
 MonoBehaviour:
@@ -1291,6 +1295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &290250437
 MonoBehaviour:
@@ -1416,6 +1421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &311952475
 MonoBehaviour:
@@ -1651,6 +1657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &407093317
 MonoBehaviour:
@@ -1886,6 +1893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &508632113
 MonoBehaviour:
@@ -2121,6 +2129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &571519249
 MonoBehaviour:
@@ -2246,6 +2255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &576391603
 MonoBehaviour:
@@ -2371,6 +2381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &603611960
 MonoBehaviour:
@@ -2496,6 +2507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &606038170
 MonoBehaviour:
@@ -2621,6 +2633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &614385351
 MonoBehaviour:
@@ -2746,6 +2759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &621748800
 MonoBehaviour:
@@ -3072,6 +3086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &766487376
 MonoBehaviour:
@@ -3240,6 +3255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &877151983
 MonoBehaviour:
@@ -3830,6 +3846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1155390700
 MonoBehaviour:
@@ -4065,6 +4082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1243506748
 MonoBehaviour:
@@ -4300,6 +4318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1282009123
 MonoBehaviour:
@@ -4755,6 +4774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1428071399
 MonoBehaviour:
@@ -4880,6 +4900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1449135721
 MonoBehaviour:
@@ -5005,6 +5026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1454980938
 MonoBehaviour:
@@ -5130,6 +5152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1492639755
 MonoBehaviour:
@@ -5551,6 +5574,8 @@ MonoBehaviour:
     type: 3}
   ComboParticle: {fileID: 6808684378109360546, guid: d87555a265099fc4490a51c1e1deb576,
     type: 3}
+  minimaxDepth: 3
+  minimaxBrain: 3
 --- !u!4 &1655377921
 Transform:
   m_ObjectHideFlags: 0
@@ -5799,6 +5824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1722934467
 MonoBehaviour:
@@ -5924,6 +5950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  CheckMaterial: 0
   offset: {x: 0, y: 0.01, z: 0}
 --- !u!114 &1769606512
 MonoBehaviour:
