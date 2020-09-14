@@ -169,9 +169,9 @@ public class GameMaster : NetworkBehaviour {
     }
 
     //Needs to be [ClientRpc] but It decides to stop working from time to time.
-    public void RpcChangePlaneColor (SyncListTuple rausch, int dedicatedButton1, int dedicatedButton2, int dedicatedButton3, int material_) {
-        if (rausch[dedicatedButton1].c == "" || rausch[dedicatedButton2].c == "" || rausch[dedicatedButton3].c == "") {
-            RpcComboGen (rausch[dedicatedButton1].b, rausch[dedicatedButton2].b, rausch[dedicatedButton3].b, material_);
+    public void RpcChangePlaneColor (SyncListTuple rausch, int xeculus1, int xeculus2, int xeculus3, int material_) {
+        if (rausch[xeculus1].c == "" || rausch[xeculus2].c == "" || rausch[xeculus3].c == "") {
+            RpcComboGen (rausch[xeculus1].b, rausch[xeculus2].b, rausch[xeculus3].b, material_);
         }
     }
 
@@ -217,7 +217,7 @@ public class GameMaster : NetworkBehaviour {
             switch (ButtonName) {
                 //Bastığımız butona göre array öğelerinin 0. kısmına moves arrayindeki hamleyi yazıyoruz.
                 //Client'in izni yok SyncList değiştirebilmek için.
-                #region Headache
+                #region InsertToTables
                 case "1":
                     XOyaz (syncRed, "red", Moves[MoveNumber - 1], 0);
                     break;
