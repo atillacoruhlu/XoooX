@@ -1414,4 +1414,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Game_Scene.unity
   - Assets/Scenes/Tutorial_Scene.unity
   - Assets/Scenes/Info_Scene.unity
-  playerPath: D:/Unity Projects/XoooX/XoooX/Builds/XoooX.exe
+  playerPath: E:/GitHubRepos/XoooX/XoooX/Builds/XoooX.exe

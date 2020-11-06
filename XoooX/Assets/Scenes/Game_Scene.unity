@@ -5574,7 +5574,7 @@ MonoBehaviour:
     type: 3}
   ComboParticle: {fileID: 6808684378109360546, guid: d87555a265099fc4490a51c1e1deb576,
     type: 3}
-  minimaxDepth: 3
+  minimaxDepth: 5
   minimaxBrain: 3
 --- !u!4 &1655377921
 Transform:
